@@ -24,10 +24,10 @@ Steps to install and setup the app are demonstrated with following commands:
 
 #### Clone the repository
 ```bash
-  git clone https://github.com/FaizanPotrick/Handy-Notes.git
+  git clone https://github.com/CSI-DMCE-2023/NotesApp-HacktoberFest-2023.git
 ```
 ```bash
-  cd Handy-Notes
+  cd NotesApp-HacktoberFest-2023
 ```
  
 #### Install npm packages
@@ -56,7 +56,7 @@ Don't forget to give the project a star! Thanks again!
 #### 1. Fork the repository.
 #### 2. Clone your forked repository to local machine.
 ```bash
-git clone https://github.com/FaizanPotrick/Handy-Notes.git
+git clone https://github.com/CSI-DMCE-2023/NotesApp-HacktoberFest-2023.git
 ```
 #### 3. Create a branch 
 ```bash
