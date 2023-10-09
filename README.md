@@ -1,21 +1,7 @@
 
-# HANDY NOTES
-
-
-### Why do people like to do lists?
-
-
-With the mountain of works we have to do each day, we can't have an ability to remember all of them. Handy Notes serve as a reminder for all the tasks you need to accomplish.
-
-
-## About the Project
-
-
-Handy Notes App is an application specially built to keep track of your tasks that need to be done. This application will be like a task keeper where the user would be able to enlist the task that they need to perform. Once the task is completed it can be removed from the list.
-
+# NOTESAPP HACKTOBERFEST 2023
 
 ## Built With
-
 
 - [React js](https://reactjs.org/)
 - [Bootstrap](https://getbootstrap.com/)
@@ -86,12 +72,6 @@ git push -u origin branchname
 ```
 #### 6. Create a new pull request from the forked repository.
 
-#### 7. Wait for your PR review and merge approval!
-
-## License
-
-
-Distributed under the [MIT](https://choosealicense.com/licenses/mit/) License. See `LICENSE.md` for more information.
 
 ## Acknowledgements
 
