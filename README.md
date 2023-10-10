@@ -1,6 +1,9 @@
 
 # NOTESAPP HACKTOBERFEST 2023
 
+## Maintainers
+[Ishaan Parsone](https://github.com/Ishaan-Parsone) & [Jainisha Pathak](https://github.com/JainishaPathak)
+
 ## Built With
 
 - [React js](https://reactjs.org/)
