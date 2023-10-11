@@ -39,6 +39,7 @@ function App() {
             value={search}
             placeholder="Search"
             onChange={(e) => setSearch(e.target.value)}
+            autoComplete="off"
           />
         </div>
       </nav>
