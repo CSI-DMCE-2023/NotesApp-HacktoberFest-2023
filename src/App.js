@@ -34,7 +34,7 @@ function App() {
         <h2 className="text-white">My Notes</h2>
         <div>
           <input
-            className="form-control"
+            className="form-control shadow-none"
             name="search"
             value={search}
             placeholder="Search"
