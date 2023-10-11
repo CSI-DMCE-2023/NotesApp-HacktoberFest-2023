@@ -32,13 +32,15 @@ function App() {
     <div className="overflow-hidden">
       <nav className="navbar navbar-dark d-flex justify-content-between align-items-center bg-dark px-3">
         <h2 className="text-white">My Notes</h2>
-        <div>
+        <div >
           <input
-            className="form-control"
+            className="form-control shadow-none border-0"
             name="search"
             value={search}
+            
             placeholder="Search"
             onChange={(e) => setSearch(e.target.value)}
+            
           />
         </div>
       </nav>
