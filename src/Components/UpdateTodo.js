@@ -82,6 +82,19 @@ function UpdateTodo({ editText, setEditText, todo, setTodo, ShowAlert }) {
                 onChange={onChange}
               />
             </div>
+            <div className="mb-3">
+              <label htmlFor="due-date" className="form-label">
+                Due Date
+              </label>
+              <input
+                type="date"
+                className="form-control"
+                id="dueDate"
+                name="dueDate"
+                value={editText.dueDate}
+                onChange={onChange}
+              />
+            </div>
           </div>
           <div className="modal-footer">
             <button

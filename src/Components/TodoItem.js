@@ -7,7 +7,7 @@ function TodoItem({ target, editText, setEditText, todo, setTodo, ShowAlert }) {
       title: target.title,
       description: target.description,
       tag: target.tag,
-      date: new Date().toLocaleTimeString(),
+      date: new Date().toLocaleDateString,
       id: target.id,
     });
   };
@@ -15,8 +15,11 @@ function TodoItem({ target, editText, setEditText, todo, setTodo, ShowAlert }) {
     setTodo(todo.filter((el) => el.id !== target.id));
     ShowAlert("Deleted");
   };
+
+  const isDueDatePassed = new Date(target.dueDate) < new Date(target.date);
+
   return (
-    <div className="card m-2 shadow-sm" style={{ width: "20rem" }}>
+    <div className={`note card ${isDueDatePassed ? 'border-danger card m-2 shadow-sm' : 'card m-2 shadow-sm'}`} style={{ width: "20rem" }}>
       <div className="card-body d-flex flex-column justify-content-between text-center">
         <div className="d-flex justify-content-between">
           <h6>{target.tag}</h6>
@@ -52,6 +55,7 @@ function TodoItem({ target, editText, setEditText, todo, setTodo, ShowAlert }) {
         </div>
         <h4 className="card-title border-bottom pb-2">{target.title}</h4>
         <p className="card-text">{target.description}</p>
+        <p className="card-text mt-2">Due Date:  {target.dueDate}</p>
         <small className="text-muted">Last Updated {target.date}</small>
       </div>
     </div>
