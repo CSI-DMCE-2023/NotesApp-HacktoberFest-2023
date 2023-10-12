@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(117, 133, 150);
+}
+.navtxt{
+    cursor: pointer;
+    color: black;
+}
+.navbar{
+    position: fixed;
+    top: 0%;
+    z-index: 10;
+    width: 100vw;
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgb(27, 27, 27);
+}
+.card{
+    transition: 0.2s ease-in-out;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    color: rgb(71, 71, 71);
+    height: 30vh;
+}
+
+.card:hover{
+    scale: 1.10;
+    border: 1px solid rgba(0, 0, 0, 0.767);
+    background-color: rgba(252, 252, 252, 0.925);
+    color: rgb(0, 0, 0);
+}
+.search{
+    border: 1px solid black;
+}

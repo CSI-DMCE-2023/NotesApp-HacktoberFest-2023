@@ -30,11 +30,11 @@ function App() {
 
   return (
     <div className="overflow-hidden">
-      <nav className="navbar navbar-dark d-flex justify-content-between align-items-center bg-dark px-3">
-        <h2 className="text-white">My Notes</h2>
+      <nav className="navbar navbar-dark d-flex justify-content-between align-items-center px-3">
+        <h2 className="text-black navtxt">My Notes</h2>
         <div>
           <input
-            className="form-control shadow-none"
+            className="form-control shadow-none search"
             name="search"
             value={search}
             placeholder="Search"
@@ -42,6 +42,8 @@ function App() {
           />
         </div>
       </nav>
+
+      <div className="main">
       {alert && (
         <div
           className="alert alert-success position-absolute start-50 translate-middle"
@@ -58,7 +60,7 @@ function App() {
         setTodo={setTodo}
         ShowAlert={ShowAlert}
       />
-      <div className="row justify-content-center">
+      <div className="row justify-content-center  mt-4">
         <h1 className="text-center mt-5">
           {todo.length === 0 && "No Notes Found"}
         </h1>
@@ -115,6 +117,7 @@ function App() {
           />
         </svg>
       </button>
+      </div>
     </div>
   );
 }
