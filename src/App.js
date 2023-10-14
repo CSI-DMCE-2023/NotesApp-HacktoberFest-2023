@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import CreateTodo from "./Components/CreateTodo";
 import TodoItem from "./Components/TodoItem";
 import UpdateTodo from "./Components/UpdateTodo";
+import SocialLink from "./Components/Socialtab/SocialLink";
 
 function App() {
   const [todo, setTodo] = useState(
@@ -89,6 +90,9 @@ function App() {
             );
           })}
       </div>
+
+<SocialLink />
+
       <button
         type="button"
         className="btn btn-dark rounded-circle shadow-sm p-0"
