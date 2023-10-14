@@ -18,6 +18,10 @@ function TodoItem({ target, editText, setEditText, todo, setTodo, ShowAlert }) {
 
   const isDueDatePassed = new Date(target.dueDate) < new Date(target.date);
 
+  let currentTime = new Date().getTime();
+  let currentDate = new Date().toJSON().slice(0, 10);
+
+
   return (
     <div
       className={`note card ${
@@ -63,7 +67,8 @@ function TodoItem({ target, editText, setEditText, todo, setTodo, ShowAlert }) {
         <h4 className="card-title border-bottom pb-2">{target.title}</h4>
         <p className="card-text">{target.description}</p>
         <p className="card-text mt-2">Due Date: {target.dueDate}</p>
-        <small className="text-muted">Last Updated {target.date}</small>
+        <small className="text-muted">Last Updated {currentDate} ({new Date(currentTime).toLocaleTimeString()})</small>
+
       </div>
     </div>
   );
