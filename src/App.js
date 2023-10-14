@@ -30,7 +30,7 @@ function App() {
 
   return (
     <div className="overflow-hidden">
-      <nav className="navbar navbar-dark d-flex justify-content-between align-items-center bg-dark px-3">
+      <nav className="navbar d-flex justify-content-between align-items-center px-3" style={{backgroundColor:"#f34c4c"}}>
         <img style={{height: '100px'}} src="/My Notes-logos_white.png" alt="My Notes" />
         <div>
           <input
@@ -91,13 +91,15 @@ function App() {
       </div>
       <button
         type="button"
-        className="btn btn-dark rounded-circle shadow-sm p-0"
+        className="btn rounded-circle shadow-sm p-0"
         style={{
           position: "fixed",
           bottom: "30px",
           right: "50px",
           width: "60px",
           height: "60px",
+          color:"white",
+          backgroundColor:"#ff7400"
         }}
         data-bs-toggle="modal"
         data-bs-target="#createNotes"

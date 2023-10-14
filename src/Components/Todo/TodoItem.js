@@ -40,7 +40,7 @@ function TodoItem({ target, editText, setEditText, todo, setTodo, ShowAlert }) {
         <div className="card-smooth-caption">
           <div className="d-flex justify-content-between align-items-center">
             <div className="mr-auto">
-              <h5 className="card-title text-white">{target.title}</h5>
+              <h5 className="card-title text-white"><b>{target.title}</b></h5>
             </div>
           </div>
         </div>

@@ -56,7 +56,7 @@ body .footer {
 }
 
 .card-smooth-caption {
-    background: linear-gradient(#00000000, #000000fa) #00000000;
+    /* background: linear-gradient(#00000000, #000000fa) #00000000; */
     padding: 2rem 1.5rem 1.5rem;
 }
 
