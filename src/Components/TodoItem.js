@@ -7,7 +7,7 @@ function TodoItem({ target, editText, setEditText, todo, setTodo, ShowAlert }) {
       title: target.title,
       description: target.description,
       tag: target.tag,
-      date: new Date().toLocaleTimeString(),
+      date: new Date().toLocaleDateString,
       id: target.id,
     });
   };
@@ -15,20 +15,18 @@ function TodoItem({ target, editText, setEditText, todo, setTodo, ShowAlert }) {
     setTodo(todo.filter((el) => el.id !== target.id));
     ShowAlert("Deleted");
   };
-  const formatTime = (inputTime) => {
-    const [time, meridian] = inputTime.split(" "); // Split the input into time and meridian (am/pm)
-    const [hours, minutes] = time.split(":"); // Split the time into hours and minutes
 
-    // Determine if it's AM or PM
-    const isAM = meridian?.meridian.toLowerCase() === "am";
+  const isDueDatePassed = new Date(target.dueDate) < new Date(target.date);
 
-    // Format the time in 12-hour format
-    const formattedTime = `${hours}:${minutes} ${isAM ? "AM" : "PM"}`;
-
-    return formattedTime;
-  };
   return (
-    <div className="card m-2 shadow-sm" style={{ width: "20rem" }}>
+    <div
+      className={`note card ${
+        isDueDatePassed
+          ? "border-danger card m-2 shadow-sm"
+          : "card m-2 shadow-sm"
+      }`}
+      style={{ width: "20rem" }}
+    >
       <div className="card-body d-flex flex-column justify-content-between text-center">
         <div className="d-flex justify-content-between">
           <h6>{target.tag}</h6>
@@ -64,9 +62,8 @@ function TodoItem({ target, editText, setEditText, todo, setTodo, ShowAlert }) {
         </div>
         <h4 className="card-title border-bottom pb-2">{target.title}</h4>
         <p className="card-text">{target.description}</p>
-        <small className="text-muted">
-          Last Updated {formatTime(target.date)}
-        </small>
+        <p className="card-text mt-2">Due Date: {target.dueDate}</p>
+        <small className="text-muted">Last Updated {target.date}</small>
       </div>
     </div>
   );
