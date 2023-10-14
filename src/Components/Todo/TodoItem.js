@@ -30,17 +30,8 @@ function TodoItem({ target, editText, setEditText, todo, setTodo, ShowAlert }) {
     return formattedTime;
   }
 
-  const isDueDatePassed = new Date(target.dueDate) < new Date(target.date);
 
   return (
-    <div
-      className={`note card ${
-        isDueDatePassed
-          ? "border-danger card m-2 shadow-sm"
-          : "card m-2 shadow-sm"
-      }`}
-      style={{ width: "20rem" }}
-    >
     <div className="card border-0 " style={{width:"20rem", marginRight:"50px", marginBottom:"30px", borderRadius:"10px"}}>
       <div className="position-relative text-white">
 
@@ -93,7 +84,6 @@ function TodoItem({ target, editText, setEditText, todo, setTodo, ShowAlert }) {
         </div>
       </div>
     </div> 
-    </div>
   );
 }
 
