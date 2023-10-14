@@ -43,7 +43,7 @@ function CreateTodo({ todo, setTodo, ShowAlert }) {
       description: "",
       tag: "",
     });
-    ShowAlert("saved");
+    ShowAlert("Saved");
   };
   return (
     <form

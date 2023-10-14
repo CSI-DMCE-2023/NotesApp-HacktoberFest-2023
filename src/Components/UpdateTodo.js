@@ -18,7 +18,7 @@ function UpdateTodo({ editText, setEditText, todo, setTodo, ShowAlert }) {
         return item.id === editText.id ? editText : item;
       })
     );
-    ShowAlert("updated");
+    ShowAlert("Updated");
   };
   return (
     <form
