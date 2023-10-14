@@ -79,6 +79,7 @@ function CreateTodo({ todo, setTodo, ShowAlert }) {
                 name="title"
                 value={text.title}
                 onChange={onChange}
+                autoComplete="off"
                 required
               />
             </div>
@@ -93,6 +94,7 @@ function CreateTodo({ todo, setTodo, ShowAlert }) {
                 value={text.description}
                 rows="3"
                 onChange={onChange}
+                autoComplete="off"
               ></textarea>
             </div>
             <div className="mb-3">
@@ -106,6 +108,7 @@ function CreateTodo({ todo, setTodo, ShowAlert }) {
                 name="tag"
                 value={text.tag}
                 onChange={onChange}
+                autoComplete="off"
               />
             </div>
             <div className="mb-3">

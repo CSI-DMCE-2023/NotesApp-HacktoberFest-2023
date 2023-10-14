@@ -31,7 +31,7 @@ function App() {
   return (
     <div className="overflow-hidden">
       <nav className="navbar navbar-dark d-flex justify-content-between align-items-center bg-dark px-3">
-        <h2 className="text-white">My Notes</h2>
+        <img style={{height: '100px'}} src="/My Notes-logos_white.png" alt="My Notes" />
         <div>
           <input
             className="form-control shadow-none"
@@ -39,6 +39,7 @@ function App() {
             value={search}
             placeholder="Search"
             onChange={(e) => setSearch(e.target.value)}
+            autoComplete="off"
           />
         </div>
       </nav>
