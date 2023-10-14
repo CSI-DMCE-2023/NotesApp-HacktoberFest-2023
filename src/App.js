@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CreateTodo from "./Components/CreateTodo";
-import TodoItem from "./Components/TodoItem";
+import TodoItem from "./Components/Todo/TodoItem";
 import UpdateTodo from "./Components/UpdateTodo";
 
 function App() {
@@ -59,7 +59,7 @@ function App() {
         setTodo={setTodo}
         ShowAlert={ShowAlert}
       />
-      <div className="row justify-content-center">
+      <div className="justify-content-center mx-5 d-flex flex-wrap my-4">
         <h1 className="text-center mt-5">
           {todo.length === 0 && "No Notes Found"}
         </h1>
