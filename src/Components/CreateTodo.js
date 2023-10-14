@@ -6,7 +6,14 @@ function CreateTodo({ todo, setTodo, ShowAlert }) {
     description: "",
     tag: "",
     date: "",
+    dueDate: "",
   });
+
+  // const [dueDate, setDueDate] = useState("");
+
+  // const handleDueDateChange = (e) => {
+  //   setDueDate(e.target.value);
+  // };
 
   const onChange = (e) => {
     const { value, name } = e.target;
@@ -26,8 +33,9 @@ function CreateTodo({ todo, setTodo, ShowAlert }) {
         title: text.title,
         description: text.description,
         tag: text.tag,
-        date: new Date().toLocaleTimeString(),
+        date: new Date().toLocaleDateString(),
         id: new Date().getTime().toString(),
+        dueDate: text.dueDate,
       },
     ]);
     setText({
@@ -101,6 +109,19 @@ function CreateTodo({ todo, setTodo, ShowAlert }) {
                 value={text.tag}
                 onChange={onChange}
                 autoComplete="off"
+              />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="due-date" className="form-label">
+                Due Date
+              </label>
+              <input
+                type="date"
+                className="form-control"
+                id="dueDate"
+                name="dueDate"
+                value={text.dueDate}
+                onChange={onChange}
               />
             </div>
           </div>
