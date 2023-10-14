@@ -146,7 +146,7 @@ body .footer {
     }
 }
 
-@media (min-width: 576px) {
+@media (max-width: 576px) {
     .card-columns .card {
         display: inline-block;
         width: 100%;
@@ -162,6 +162,16 @@ body .footer {
     .container {
         max-width: 98%;
     }
+
+    .my1{
+        position: relative;
+        right: 3rem;
+    }
+
+    .my-4{
+        margin-top: 0rem;
+    }
+
 }
 
 @media (min-width: 796px) {

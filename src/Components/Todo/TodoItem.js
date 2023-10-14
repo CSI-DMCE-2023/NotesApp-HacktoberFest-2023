@@ -42,7 +42,7 @@ function TodoItem({ target, editText, setEditText, todo, setTodo, ShowAlert }) {
       <div className="position-relative text-white">
 
         <div className="card-img-overlay three"><span className="badge badge-light text-uppercase">{target.tag}</span>
-        <span className={`badge badge-light text-uppercase ${borderClass}`} style={{position:"relative", top:"-2rem", right:"-11rem"}}>{target.dueDate}</span>
+        <span className={`badge badge-light my1 text-uppercase ${borderClass}`} style={{position:"relative", top:"-2rem", right:"-11rem"}}>{target.dueDate}</span>
         </div>
         <div className="card-smooth-caption">
           <div className="d-flex justify-content-between align-items-center">

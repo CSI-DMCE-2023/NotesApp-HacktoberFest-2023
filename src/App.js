@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import CreateTodo from "./Components/CreateTodo";
 import TodoItem from "./Components/Todo/TodoItem";
 import UpdateTodo from "./Components/UpdateTodo";
+import '../src/app.css';
 
 function App() {
   const [todo, setTodo] = useState(

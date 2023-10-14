@@ -1,0 +1,14 @@
+@media (max-width: 496px) {
+    
+    nav{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 796px) {
+    nav{
+        display: flex;
+        flex-direction: column;
+    }
+}
