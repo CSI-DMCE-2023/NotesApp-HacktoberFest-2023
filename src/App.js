@@ -3,6 +3,35 @@ import CreateTodo from "./Components/CreateTodo";
 import TodoItem from "./Components/TodoItem";
 import UpdateTodo from "./Components/UpdateTodo";
 
+
+
+const MyStyle = () =>{
+  const navStyle = {
+    color: 'black',
+    fontSize:'16',
+    cursor: 'pointer',
+  };
+
+  const imgStyle = {
+    height: '80px',
+  };
+
+  
+  return (
+    <>
+      <img style={imgStyle} src="/notes.png" alt="My Notes" />
+      <div
+        className="logo-title"
+        style={navStyle}
+      >
+        <h1>MY NOTES</h1>
+      </div>
+    </>
+  );
+
+};
+
+
 function App() {
   const [todo, setTodo] = useState(
     localStorage.getItem("todo") ? JSON.parse(localStorage.getItem("todo")) : []
@@ -28,10 +57,13 @@ function App() {
     }, 3000);
   };
 
+ 
+
   return (
     <div className="overflow-hidden">
-      <nav className="navbar navbar-dark d-flex justify-content-between align-items-center bg-dark px-3">
-        <img style={{height: '100px'}} src="/My Notes-logos_white.png" alt="My Notes" />
+      <nav className="navbar d-flex navbar-light bg-light " >
+        <MyStyle />
+
         <div>
           <input
             className="form-control shadow-none"
@@ -41,6 +73,7 @@ function App() {
             onChange={(e) => setSearch(e.target.value)}
             autoComplete="off"
           />
+          
         </div>
       </nav>
       {alert && (
