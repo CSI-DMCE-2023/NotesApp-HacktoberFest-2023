@@ -21,7 +21,7 @@ function TodoItem({ target, editText, setEditText, todo, setTodo, ShowAlert }) {
 
   let currentTime = new Date().getTime();
   let currentDate = new Date().toJSON().slice(0, 10);
-  const borderClass = isDueDatePassed ? bg-danger : bg-success;
+  const borderClass = isDueDatePassed ? "bg-danger" : "bg-success";
 
 
   return (
