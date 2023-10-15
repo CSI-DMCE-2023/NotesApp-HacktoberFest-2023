@@ -1,8 +1,11 @@
 /*** Body ***/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
 
 .card,
 body {
     display: flex;
+    font-family: 'Roboto', sans-serif;
 }
 
 .card-link,
@@ -18,6 +21,7 @@ body {
 body {
     flex-direction: column;
     min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     font-family: Roboto, sans-serif;
     line-height: 1.5;
@@ -665,150 +669,17 @@ hr {
     background-position: 50% 50%;
 }
 
-.card-body.two {
-    padding-bottom: 2px !important;
-}
 
-.card-body.three {
-    background-image: url(https://i.pinimg.com/1200x/c3/ed/76/c3ed76251797d0acf57c19acda019d00.jpg);
-    background-size: cover;
-    height: 340px;
-    background-position: 50% 35%;
-    border-radius: 12px;
-}
 
-.card-body.three .footer {
-    color: red !important;
-    margin-top: 150px;
-}
 
-/* small.text-muted {
-    opacity: 1 !important;
-    color: #e7e9f5 !important;
-    padding: 5pt 10pt;
-    box-shadow: 1px 1px 2px 1px #231f20;
-    font-weight: 300;
-    border-radius: 7px 7px 0 0 !important;
-    border-top: 1px solid #3b3d3f;
-    letter-spacing: 0.1666666667em !important;
-    font-family: antique-olive !important;
-    background: hsl(232deg 6% 17%);
-    z-index: -1;
-    position: absolute;
-    top: -30px;
-    left: 6px;
-    line-height: 1;
-} */
 
-.card-avatar.avatar-border {
-    box-shadow: 0 -0.75px 0.5px 0 #212428 inset, 0 0.5px 0.5px #535d65 inset,
-    0 0.5px 0.5px -0.25px rgb(5 6 6 / 50%),
-    0 1.75px 1px -0.25px rgb(26 29 31 / 25%);
-    padding: 40px !important;
-    width: 40px;
-    height: 40px;
-    margin: auto;
-    border: 1.5px solid #15181a;
-    background: linear-gradient(#3c4349, #252a2d);
-    position: relative;
-    background-image: url(https://assets.codepen.io/4927073/icon-105_edited.jpg);
-    background-size: 130%;
-    background-position: 20% 10%;
-}
-
-h2.indent {
-    margin-top: 20px;
-    font-size: 20px;
-    margin-right: 8px;
-    float: left;
-    text-align: right;
-    font-family: Roboto;
-    font-weight: 900;
-    line-height: 0.86;
-    color: #b06;
-    width: 50%;
-    margin-left: -16px;
-    text-transform: uppercase;
-    text-overflow: clip;
-    -webkit-line-clamp: 2 !important;
-    -webkit-box-orient: vertical;
-    display: -webkit-box;
-    overflow: hidden;
-}
-
-h2.indent.red {
-    color: hsl(6deg 100% 40%);
-}
-
-p.indent {
-    font-family: freight-display-pro !important;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 1.28;
-    text-align: -webkit-left;
-    margin-top: 18px;
-}
-
-.container.incard {
-    max-width: 100% !important;
-    padding-right: 0;
-    padding-left: 0;
-}
-
-h5.card-title.text-white {
-    line-height: 1.25;
-    margin-bottom: 5px;
-    text-overflow: clip;
-    -webkit-line-clamp: 1 !important;
-    -webkit-box-orient: vertical;
-    display: -webkit-box;
-    overflow: hidden;
-}
-
-.card-avatar.avatar-border.two {
-    padding: 55px !important;
-    background-image: url(https://images.vice.com/noisey/content-images/article/what-can-we-learn-from-kanye-wests-yeezus-trailer/3259d818ca9944c41c54d280f4929310.jpg) !important;
-    background-size: cover;
-    background-position: 50% 50%;
-    border-radius: 6px;
-    margin-bottom: -20px;
-    margin-top: -10px;
-    border: none;
-    box-shadow: none;
-}
-
-.card.border-0.wtab {
-    margin-top: 30px !important;
-}
-
-.card-body.proavatar {
-    padding-bottom: 20px !important;
-    padding-top: 20px !important;
-}
-
-.proavatar .card-title {
-    font-size: 18px !important;
-    line-height: 1.5;
-    margin-bottom: 0 !important;
-    font-weight: 900 !important;
-}
-
-.card.bg-primary.text-white.text-center.p-4.border-0.four {
-    background-image: none !important;
-    content: url(https://assets.codepen.io/4927073/micard3.png);
-    width: 100%;
-    height: auto !important;
-    padding: 0 !important;
-    background: 0 0 !important;
-    border-radius: 20px !important;
-}
 
 span.badge {
     color: #f9fafb !important;
     font-weight: 400;
     border-radius: 5px !important;
     letter-spacing: 0.135em !important;
-    font-family: antique-olive !important;
+    font-family: 'Roboto', sans-serif !important;
     padding: 4px 5px !important;
     box-shadow: 0 0 0.25px hsl(208deg 7% 46%),
     -0.5px -0.75px 1px 0.25px hsl(206deg 100% 97% / 30%) inset,
@@ -824,86 +695,13 @@ span.badge {
     -1.25px -1.25px 1.65px 0 hsl(13deg 38% 4% / 5%);
 }
 
-.badge-info {
-    background-color: #fb7ea8;
-    background-image: linear-gradient(90deg, #ea4c89, #c52362);
-    color: #333;
-    box-shadow: 0 0 0.25px #fb83b1,
-    -0.5px -0.75px 1px hsl(206deg 100% 97% / 15%) inset,
-    -0.75px -1.5px 1.5px hsl(349deg 76% 10% / 5%) inset,
-    0 -0.5px 0.75px 0.25px #f26e95, 0 0.5px 0.75px 0.25px #fb7ea8,
-    0 -0.75px 2px -0.75px #f26e95, 0 0.75px 2px -0.75px #fb7ea8,
-    -0.5px -2px 3px 0.75px hsl(0deg 0% 0% / 85%),
-    -1.75px -2.5px 2.5px -0.25px hsl(3deg 57% 63% / 35%),
-    -0.75px -0.75px 0.625px 0.25px hsl(3deg 57% 63% / 50%),
-    -0.85px -0.35px 0.85px 0 hsl(358deg 55% 39% / 55%),
-    -1.25px -1.25px 1.65px 0 hsl(358deg 55% 39% / 25%) !important;
-}
 
-.badge-warning {
-    color: #dee2e6 !important;
-    background-color: #3e8ef1;
-    background-image: linear-gradient(
-    hsl(218deg 66% 53%),
-    hsl(216deg 73% 51%),
-    hsl(213deg 86% 59%),
-    hsl(216deg 86% 58%)
-  );
-    box-shadow: 0 0 0.25px #3d8df0,
-    -0.5px -0.75px 1px hsl(206deg 100% 97% / 15%) inset,
-    -0.75px -1.5px 1.5px hsl(349deg 76% 10% / 5%) inset,
-    0 -0.5px 0.75px 0.25px #3872d6, 0 0.5px 0.75px 0.25px #3881f0,
-    0 -0.75px 2px -0.75px #3872d6, 0 0.75px 2px -0.75px #3881f0,
-    -0.5px -2px 3px 0.75px hsl(211deg 85% 10% / 85%),
-    -1.75px -2.5px 2.5px -0.25px hsl(240deg 49% 47% / 35%),
-    -0.75px -0.75px 0.625px 0.25px hsl(240deg 49% 47% / 50%),
-    -0.85px -0.35px 0.85px 0 hsl(235deg 40% 71% / 55%),
-    -1.25px -1.25px 1.65px 0 hsl(235deg 40% 71% / 25%) !important;
-}
 
-.badge-info2 {
-    background-color: #ff4935;
-}
 
-.badge-warning3 {
-    background-image: linear-gradient(
-    hsl(40deg 80% 60%),
-    hsl(38deg 87% 58%),
-    hsl(35deg 100% 66%),
-    hsl(38deg 100% 65%)
-  ) !important;
-    box-shadow: 0 0 0.25px hsl(35deg 100% 66%),
-    -0.5px -0.75px 1px hsl(206deg 100% 97% / 15%) inset,
-    -0.75px -1.5px 1.5px hsl(349deg 76% 10% / 5%) inset,
-    0 -0.5px 0.75px 0.25px hsl(40deg 80% 60%),
-    0 0.5px 0.75px 0.25px hsl(38deg 100% 65%),
-    0 -0.75px 2px -0.75px hsl(40deg 80% 60%),
-    0 0.75px 2px -0.75px hsl(38deg 100% 65%),
-    -0.5px -2px 3px 0.75px hsl(33deg 99% 10% / 85%),
-    -1.75px -2.5px 2.5px -0.25px hsl(62deg 63% 54% / 35%),
-    -0.75px -0.75px 0.625px 0.25px hsl(62deg 63% 54% / 50%),
-    -0.85px -0.35px 0.85px 0 hsl(57deg 61% 89% / 55%),
-    -1.25px -1.25px 1.65px 0 hsl(57deg 61% 89% / 25%) !important;
-}
 
-.badge-lightblue {
-    background-image: linear-gradient(
-    hsl(207deg 14% 71%),
-    hsl(205deg 21% 69%),
-    hsl(202deg 34% 77%),
-    hsl(205deg 34% 76%)
-  ) !important;
-    box-shadow: 0 0 0.25px hsl(202deg 34% 77%),
-    -0.5px -0.75px 1px hsl(206deg 100% 97% / 15%) inset,
-    -0.75px -1.5px 1.5px hsl(200deg 33% 10% / 5%) inset,
-    0 -0.5px 0.75px 0.25px hsl(207deg 14% 71%),
-    0 0.5px 0.75px 0.25px hsl(205deg 34% 76%),
-    0 -0.75px 2px -0.75px hsl(207deg 14% 71%),
-    0 0.75px 2px -0.75px hsl(205deg 34% 76%),
-    -0.5px -2px 3px 0.75px hsl(200deg 33% 10% / 85%),
-    -1.75px -2.5px 2.5px -0.25px hsl(0deg 0% 65% / 35%),
-    -0.75px -0.75px 0.625px 0.25px hsl(0deg 0% 65% / 50%),
-    -0.85px -0.35px 0.85px 0 hsl(0deg 0% 89% / 55%),
-    -1.25px -1.25px 1.65px 0 hsl(0deg 0% 89% / 25%) !important;
-}
+
+
+
+
+
 
