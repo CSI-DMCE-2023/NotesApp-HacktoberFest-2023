@@ -8,7 +8,7 @@ function TodoItem({ target, editText, setEditText, todo, setTodo, ShowAlert }) {
       title: target.title,
       description: target.description,
       tag: target.tag,
-      date: new Date().toLocaleTimeString(),
+      date: new Date().toLocaleDateString,
       id: target.id,
     });
   };
@@ -17,27 +17,16 @@ function TodoItem({ target, editText, setEditText, todo, setTodo, ShowAlert }) {
     ShowAlert("deleted");
   };
 
-  const formatTime = (inputTime) => {
-    const [time, meridian] = inputTime.split(' '); // Split the input into time and meridian (am/pm)
-    const [hours, minutes] = time.split(':'); // Split the time into hours and minutes
-  
-    // Determine if it's AM or PM
-    const isAM = meridian.toLowerCase() === 'am';
-  
-    // Format the time in 12-hour format
-    const formattedTime = `${hours}:${minutes} ${isAM ? 'AM' : 'PM'}`;
-  
-    return formattedTime;
-  }
+    const isDueDatePassed = new Date(target.dueDate) < new Date(target.date);
 
-  const isDueDatePassed = new Date(target.dueDate) > new Date();
-  console.log(isDueDatePassed);
-  const borderClass = isDueDatePassed ? "bg-danger" : "bg-success";
+  let currentTime = new Date().getTime();
+  let currentDate = new Date().toJSON().slice(0, 10);
+  const borderClass = isDueDatePassed ? bg-danger : bg-success;
 
 
   return (
     
-    <div className={`card border-0 ${borderClass} card m-3 shadow-sm`}
+    <div className={`card border-0 card m-3 shadow-sm`}
     style={{width:"20rem", marginRight:"50px", marginBottom:"30px", borderRadius:"10px"}}>
       <div className="position-relative text-white">
 
@@ -95,3 +84,5 @@ function TodoItem({ target, editText, setEditText, todo, setTodo, ShowAlert }) {
 }
 
 export default TodoItem;
+
+
