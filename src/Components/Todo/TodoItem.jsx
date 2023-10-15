@@ -47,7 +47,7 @@ function TodoItem({ target, editText, setEditText, todo, setTodo, ShowAlert }) {
 
       <div className="card-footer">
         <div className="media align-items-center d-flex space" style={{justifyContent:"space-between"}}>
-        <small className="text-muted">Last Updated {target.date}</small>
+        <small className="text-muted">Last Updated {currentDate} ({new Date(currentTime).toLocaleTimeString()})</small>
           <div className="footerright d-flex">
             <svg
               xmlns="http://www.w3.org/2000/svg"

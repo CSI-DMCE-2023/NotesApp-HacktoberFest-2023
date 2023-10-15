@@ -314,6 +314,7 @@ p.card-text,
 i.pr-1 {
     font-size: 13px !important;
     font-weight: 400;
+    padding-right: 25px;
 }
 
 .card.border-0 {
