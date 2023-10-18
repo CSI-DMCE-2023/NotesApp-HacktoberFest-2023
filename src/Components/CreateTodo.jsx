@@ -50,14 +50,14 @@ function CreateTodo({ todo, setTodo, ShowAlert }) {
       className="modal fade"
       id="createNotes"
       tabIndex="-1"
-      aria-labelledby="exampleModalLabel"
+      aria-labelledby="create-todo-label"
       aria-hidden="true"
       onSubmit={submitHandler}
     >
-      <div className="modal-dialog">
+      <div className="modal-dialog modal-fullscreen-sm-down">
         <div className="modal-content">
           <div className="modal-header">
-            <h5 className="modal-title" id="exampleModalLabel">
+            <h5 className="modal-title" id="create-todo-label">
               Add Todo
             </h5>
             <button
