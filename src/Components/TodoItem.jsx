@@ -21,31 +21,28 @@ function TodoItem({ target, editText, setEditText, todo, setTodo, ShowAlert }) {
   let currentTime = new Date().getTime();
   let currentDate = new Date().toJSON().slice(0, 10);
 
-
   return (
     <div
-    className={`note card ${
-      isDueDatePassed
-        ? "border-danger card m-2 shadow"
-        : "card m-2 shadow"
-    }`}
-    
+      className={`note card ${
+        isDueDatePassed ? "border-danger card m-2 shadow" : "card m-2 shadow"
+      }`}
       style={{
         width: "20rem",
         backgroundColor: "white",
-        borderRadius: "10px", 
-        boxShadow: "0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)", 
+       
+        boxShadow:
+          "0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)",
       }}
     >
       <div className="card-body d-flex flex-column justify-content-between text-left">
         <div className="d-flex justify-content-between align-items-center">
-          <h6 style={{ color: "#4CAF50", margin: 0 }}>{target.tag}</h6> 
+          <h6 style={{ color: "#F4B400", margin: 0 }}>{target.tag}</h6>
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
-              fill="#4CAF50" // Green icon color
+              fill="#F4B400" 
               className="bi bi-pencil"
               viewBox="0 0 16 16"
               style={{ cursor: "pointer", marginRight: "10px" }}
@@ -61,7 +58,7 @@ function TodoItem({ target, editText, setEditText, todo, setTodo, ShowAlert }) {
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
-              fill="#EB5757" // Red icon color
+              fill="#EB5757" 
               className="bi bi-trash"
               viewBox="0 0 16 16"
               style={{ cursor: "pointer" }}
@@ -84,16 +81,16 @@ function TodoItem({ target, editText, setEditText, todo, setTodo, ShowAlert }) {
         <p className="card-text" style={{ color: "#333" }}>
           {target.description}
         </p>
-        <p className="card-text mt-2" style={{ color: "#4CAF50" }}>
+        <p className="card-text mt-2" style={{ color: "#F4B400" }}>
           Due Date: {target.dueDate}
         </p>
         <small className="text-muted" style={{ color: "#666" }}>
-          Last Updated {currentDate} ({new Date(currentTime).toLocaleTimeString()})
+          Last Updated {currentDate} (
+          {new Date(currentTime).toLocaleTimeString()})
         </small>
       </div>
     </div>
   );
-  
 }
 
 export default TodoItem;

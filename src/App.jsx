@@ -72,7 +72,7 @@ function App() {
       <div className="row justify-content-center">
         <h1
           className="text-center mt-5"
-          style={{ color: "blue", fontSize: "24px" }}
+          style={{  fontSize: "1.5rem" }}
         >
           {todo.length === 0 && <span>No Notes Found</span>}
         </h1>
