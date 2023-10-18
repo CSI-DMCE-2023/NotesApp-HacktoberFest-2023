@@ -7,7 +7,7 @@ function TodoItem({ target, editText, setEditText, todo, setTodo, ShowAlert }) {
       title: target.title,
       description: target.description,
       tag: target.tag,
-      date: new Date().toLocaleDateString,
+      date: new Date().toLocaleDateString(),
       id: target.id,
     });
   };
@@ -24,54 +24,76 @@ function TodoItem({ target, editText, setEditText, todo, setTodo, ShowAlert }) {
 
   return (
     <div
-      className={`note card ${
-        isDueDatePassed
-          ? "border-danger card m-2 shadow-sm"
-          : "card m-2 shadow-sm"
-      }`}
-      style={{ width: "20rem" }}
+    className={`note card ${
+      isDueDatePassed
+        ? "border-danger card m-2 shadow"
+        : "card m-2 shadow"
+    }`}
+    
+      style={{
+        width: "20rem",
+        backgroundColor: "white",
+        borderRadius: "10px", 
+        boxShadow: "0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)", 
+      }}
     >
-      <div className="card-body d-flex flex-column justify-content-between text-center">
-        <div className="d-flex justify-content-between">
-          <h6>{target.tag}</h6>
+      <div className="card-body d-flex flex-column justify-content-between text-left">
+        <div className="d-flex justify-content-between align-items-center">
+          <h6 style={{ color: "#4CAF50", margin: 0 }}>{target.tag}</h6> 
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
-              fill="currentColor"
-              className="bi bi-pen-fill me-2"
+              fill="#4CAF50" // Green icon color
+              className="bi bi-pencil"
               viewBox="0 0 16 16"
-              data-bs-toggle="modal"
-              data-bs-target="#updateNotes"
-              data-bs-dismiss="modal"
-              style={{ cursor: "pointer" }}
+              style={{ cursor: "pointer", marginRight: "10px" }}
               onClick={editHandler}
             >
-              <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001z" />
+              <path d="M0 12.536l2.614-2.616 6.95 6.951-2.616 2.615H0v-6.95z" />
+              <path
+                fillRule="evenodd"
+                d="M11.293 2.293a1 1 0 0 1 1.414 0l1.293 1.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-.39.242l-3 1a1 1 0 0 1-1.306-1.307l1-3a1 1 0 0 1 .242-.391l8-8z"
+              />
             </svg>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
-              fill="currentColor"
-              className="bi bi-trash-fill ms-2"
+              fill="#EB5757" // Red icon color
+              className="bi bi-trash"
               viewBox="0 0 16 16"
               style={{ cursor: "pointer" }}
               onClick={deleteHandler}
             >
-              <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+              <path
+                fillRule="evenodd"
+                d="M5.293 1.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414-1.414L9.586 8 5.293 3.707a1 1 0 0 1 0-1.414z"
+              />
+              <path
+                fillRule="evenodd"
+                d="M1.293 4.293a1 1 0 0 1 0-1.414l4-4a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1 0 1.414L6.414 8l4.293 4.293a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414L3.586 8 1.293 5.707a1 1 0 0 1 0-1.414z"
+              />
             </svg>
           </div>
         </div>
-        <h4 className="card-title border-bottom pb-2">{target.title}</h4>
-        <p className="card-text">{target.description}</p>
-        <p className="card-text mt-2">Due Date: {target.dueDate}</p>
-        <small className="text-muted">Last Updated {currentDate} ({new Date(currentTime).toLocaleTimeString()})</small>
-
+        <h4 className="card-title border-bottom pb-2" style={{ color: "#333" }}>
+          {target.title}
+        </h4>
+        <p className="card-text" style={{ color: "#333" }}>
+          {target.description}
+        </p>
+        <p className="card-text mt-2" style={{ color: "#4CAF50" }}>
+          Due Date: {target.dueDate}
+        </p>
+        <small className="text-muted" style={{ color: "#666" }}>
+          Last Updated {currentDate} ({new Date(currentTime).toLocaleTimeString()})
+        </small>
       </div>
     </div>
   );
+  
 }
 
 export default TodoItem;

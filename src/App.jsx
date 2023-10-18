@@ -30,27 +30,36 @@ function App() {
 
   return (
     <div className="overflow-hidden">
-      <nav className="navbar navbar-dark d-flex justify-content-between align-items-center bg-dark px-3">
-        <img style={{height: '100px'}} src="/My Notes-logos_white.png" alt="My Notes" />
-        <div>
-          <input
-            className="form-control shadow-none"
-            name="search"
-            value={search}
-            placeholder="Search"
-            onChange={(e) => setSearch(e.target.value)}
-            autoComplete="off"
+      <nav className="navbar navbar-dark bg-dark">
+        <div className="container">
+          <img
+            src="/My Notes-logos_white.png"
+            alt="My Notes"
+            className="navbar-brand"
+            style={{ height: "50px" }}
           />
+          <div className="d-flex align-items-center">
+            <input
+              className="form-control shadow-none "
+              name="search"
+              value={search}
+              placeholder="Search"
+              onChange={(e) => setSearch(e.target.value)}
+              autoComplete="off"
+            />
+          </div>
         </div>
       </nav>
+
       {alert && (
         <div
-          className="alert alert-success position-absolute start-50 translate-middle"
-          style={{ zIndex: "500", top: "4vh" }}
+          className="alert alert-success position-absolute bottom-0 end-0 m-4"
+          style={{ zIndex: "500" }}
         >
           {alert}
         </div>
       )}
+
       <CreateTodo todo={todo} setTodo={setTodo} ShowAlert={ShowAlert} />
       <UpdateTodo
         editText={editText}
@@ -59,21 +68,24 @@ function App() {
         setTodo={setTodo}
         ShowAlert={ShowAlert}
       />
+
       <div className="row justify-content-center">
-        <h1 className="text-center mt-5">
-          {todo.length === 0 && "No Notes Found"}
+        <h1
+          className="text-center mt-5"
+          style={{ color: "blue", fontSize: "24px" }}
+        >
+          {todo.length === 0 && <span>No Notes Found</span>}
         </h1>
         {todo
           .filter((target) => {
-            if (target.title.toLowerCase().includes(search.toLowerCase())) {
-              return target;
-            } else if (
-              target.tag.toLowerCase().includes(search.toLowerCase())
-            ) {
-              return target;
-            } else {
-              return null;
-            }
+            const titleMatch = target.title
+              .toLowerCase()
+              .includes(search.toLowerCase());
+            const tagMatch = target.tag
+              .toLowerCase()
+              .includes(search.toLowerCase());
+
+            return titleMatch || tagMatch ? target : null;
           })
           .map((target) => {
             return (
@@ -89,6 +101,7 @@ function App() {
             );
           })}
       </div>
+
       <button
         type="button"
         className="btn btn-dark rounded-circle shadow-sm p-0"
