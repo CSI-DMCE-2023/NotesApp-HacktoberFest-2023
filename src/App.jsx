@@ -30,17 +30,41 @@ function App() {
 
   return (
     <div className="overflow-hidden">
-      <nav className="navbar navbar-dark d-flex justify-content-between align-items-center bg-dark px-3">
-        <img style={{height: '100px'}} src="/My Notes-logos_white.png" alt="My Notes" />
-        <div>
-          <input
-            className="form-control shadow-none"
-            name="search"
-            value={search}
-            placeholder="Search"
-            onChange={(e) => setSearch(e.target.value)}
-            autoComplete="off"
+      <nav className="navbar navbar-dark navbar-expand-md d-flex justify-content-between align-items-center bg-dark px-3">
+        <div class="container-fluid">
+          <img
+            style={{ maxWidth: "200px" }}
+            src="/My Notes-logos_white.png"
+            alt="My Notes"
           />
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbar-scroll"
+            aria-controls="navbarScroll"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar-scroll">
+            <form class="d-flex ms-auto" role="search">
+              <input
+                className="form-control shadow-none me-2"
+                name="search"
+                value={search}
+                placeholder="Search"
+                onChange={(e) => setSearch(e.target.value)}
+                autoComplete="off"
+                type="search"
+                aria-label="Search"
+              />
+              <button class="btn btn-secondary" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
         </div>
       </nav>
       {alert && (
